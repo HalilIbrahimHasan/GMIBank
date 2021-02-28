@@ -1,8 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.003407">
-    <testcase classname="Dummy Test" name="All tests" time="0.003407">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="73.757582">
+    <testcase classname="Register new applicants" name="Register new users for GMI Bank" time="21.88245">
         <system-out>
-            <![CDATA[Given user tries tests......................................................passed
+            <![CDATA[Given user is on the registration page......................................passed
+And user enters ssn number as "333-45-2345".................................passed
+Then user enters firstname and lastname as "Ben" and "Student"..............passed
+When user provides address "Long Island"....................................passed
+Then user provides mobilephone as "689-345-2354"............................passed
+And user provides a username "StakeHolder"..................................passed
+Then user provides email id as "stakeholder@gmail.com"......................passed
+When user enters the password as "stakeholder[1]."..........................passed
+And user confirms the new password "stakeholder[1]."........................passed
+Then user clicks on register button and sees the success message as "successfully registered".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register new applicants" name="admin account activation" time="27.485568">
+        <system-out>
+            <![CDATA[Given user goes to login page...............................................passed
+And user provides username "CWoburn" and password "Cw192837?" along with role "admin".passed
+And user logs in............................................................passed
+And user clicks on the administration dropdown..............................passed
+And user clicks on the userManagement button................................passed
+When user activates the current customer....................................passed
+Then user signs out.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register new applicants" name="go to registration" time="1.380534">
+        <system-out>
+            <![CDATA[Given user goes to login page...............................................passed
+And user provides username "gino.wintheiser" and password "%B6B*q1!TH" along with role "employee".passed
+Then user logs in...........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register new applicants" name="All account info" time="8.484877">
+        <system-out>
+            <![CDATA[Given user navigates to my operations.......................................passed
+And user clicks on manageAccount............................................passed
+When user creates a new account.............................................passed
+Then user provides a description "checking account for user mahir5".........passed
+And user provides their balance "20000".....................................passed
+And user provides an account type "CHECKING"................................passed
+When user provides the account status "ACTIVE"..............................passed
+Then user saves the account.................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register new applicants" name="All account info 2" time="11.006461">
+        <system-out>
+            <![CDATA[Given user navigates to my operations.......................................passed
+And user clicks on manageAccount............................................passed
+When user creates a new account.............................................passed
+Then user provides a description "saving account for user mahir5"...........passed
+And user provides their balance "20000".....................................passed
+And user provides an account type "CHECKING"................................passed
+When user provides the account status "ACTIVE"..............................passed
+Then user saves the account.................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register new applicants" name="Create customer info" time="3.517692">
+        <system-out>
+            <![CDATA[And user navigates to my operations.........................................passed
+When user clicks on manageCustomer..........................................passed
+Then user creates a customer................................................passed
+And user types the ssn as ""................................................passed
+And user clicks on the searchbox............................................passed
+When user types the firstname as "".........................................passed
+Then user also types the lastname as "".....................................passed
+And user provides the middle initial as ""..................................passed
+And user types the email id as ""...........................................passed
+Then user types the mobilePhoneNumber as "".................................passed
+When user types the actual phone number as ""...............................passed
+And user types the zipCode as ""............................................passed
+Then user the address as "".................................................passed
+And user types the city as "Fairfax"........................................passed
+And user types the same ssn as ""...........................................passed
+When user selects a country as "USA"........................................passed
+And user types the state name as "Virginia".................................passed
+When user selects an account from dropdown as ""............................passed
+And user clicks on save button..............................................passed
+Then user signs out.........................................................passed
 ]]>
         </system-out>
     </testcase>

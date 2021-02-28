@@ -6,15 +6,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Driver {//What?=>It is just to create, initialize the driver instance.(Singleton driver)
+public class Driver {
+
+    private static int timeout = 5;
+    //What?=>It is just to create, initialize the driver instance.(Singleton driver)
     //Why?=>We don't want to create and initialize the driver when we don't need
     //We will create and initialize the driver when it is null
     //We can use Driver class with different browser(chrome,firefox,headless)
@@ -71,8 +76,28 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
             }
         }
     }
+    public static void waitAndClick(WebElement element) {
+        for (int i = 0; i < timeout; i++) {
+            try {
+                element.click();
+                return;
+            } catch (WebDriverException e) {
+                wait(1);
+            }
+        }
+    }
 
     public static void waitAndSendText(WebElement element,String text, int timeout) {
+        for (int i = 0; i < timeout; i++) {
+            try {
+                element.sendKeys(text);
+                return;
+            } catch (WebDriverException e) {
+                wait(1);
+            }
+        }
+    }
+    public static void waitAndSendTextWithDefaultTime(WebElement element,String text) {
         for (int i = 0; i < timeout; i++) {
             try {
                 element.sendKeys(text);
@@ -154,14 +179,64 @@ public class Driver {//What?=>It is just to create, initialize the driver instan
         }
 
     }
-    //comments to be added
-    //Here some changes made on local branch
 
+    /**
+     * Clicks on an element using JavaScript
+     *
+     * @param element
+     */
+    public static void clickWithJS(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+    }
 
-    //Here is the conflicting scripts
-    //new conflicting changes
+    /**
+     * Clicks on an element using JavaScript
+     *
+     * @param elements
+     */
+    public static void clickWithJSAsList(List<WebElement> elements) {
+        for (WebElement each : elements) {
+            ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", waitForVisibility(each,5));
+            ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", each);
+        }
+    }
 
-    //Here I will have new commits
-    //Here I will type more changes
+    /**
+     * Performs double click action on an element
+     *
+     * @param element
+     */
+    public static void doubleClick(WebElement element) {
+        new Actions(Driver.getDriver()).doubleClick(element).build().perform();
+    }
 
+    public static void selectByVisibleText(WebElement element, String text){
+        Select objSelect =new Select(element);
+        objSelect.selectByVisibleText(text);
+    }
+
+    public static void selectByIndex(WebElement element, int index){
+        Select objSelect =new Select(element);
+        objSelect.selectByIndex(index);
+    }
+
+    public static void selectByValue(WebElement element, String value) {
+        Select objSelect = new Select(element);
+        List<WebElement> elementCount = objSelect.getOptions();
+        objSelect.selectByValue(value);
+        System.out.println("number of elements: "+elementCount.size());
+    }
+
+    public static void sleep(int timeOut){
+        try {
+            Thread.sleep(timeOut);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void waitAndClickLocationText(WebElement element, String value){
+        Driver.getDriver().findElement(By.xpath("//*[text()='"+value+"']")).click();
+    }
 }

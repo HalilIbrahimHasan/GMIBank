@@ -1,5 +1,8 @@
 package gmibank.pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
     private int id;
@@ -10,6 +13,57 @@ public class User {
     private boolean activated;
     private String langKey;
     private String imageUrl;
+    private String username;
+    private String password;
+    private String resetDate;
+    private String ssn;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    private String address;
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    private String phoneNumber;
+
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
 
     public int getId() {
         return id;
@@ -83,5 +137,5 @@ public class User {
         this.resetDate = resetDate;
     }
 
-    private String resetDate;
+
 }

@@ -1,40 +1,1038 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 7,
-        "name": "All tests",
+        "line": 24,
+        "name": "Register new users for GMI Bank",
         "description": "",
-        "id": "dummy-test;all-tests",
+        "id": "register-new-applicants;register-new-users-for-gmi-bank;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 930900,
+              "duration": 11933186600,
               "status": "passed"
             },
-            "line": 8,
-            "name": "user tries tests",
+            "line": 9,
+            "name": "user is on the registration page",
             "match": {
-              "location": "DummyTestSteps.user_tries_tests()"
+              "location": "RegistrationUIStep.user_is_on_the_registration_page()"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1208203300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters ssn number as \"333-45-2345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"333-45-2345\"",
+                  "offset": 26
+                }
+              ],
+              "location": "RegistrationUIStep.user_enters_ssn_number_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1328379900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters firstname and lastname as \"Ben\" and \"Student\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ben\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"Student\"",
+                  "offset": 48
+                }
+              ],
+              "location": "RegistrationUIStep.user_enters_firstname_and_lastname_as_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1203112600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user provides address \"Long Island\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Long Island\"",
+                  "offset": 22
+                }
+              ],
+              "location": "RegistrationUIStep.user_provides_address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1197544600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user provides mobilephone as \"689-345-2354\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"689-345-2354\"",
+                  "offset": 29
+                }
+              ],
+              "location": "RegistrationUIStep.user_provides_mobilephone_as(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1156067900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user provides a username \"StakeHolder\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"StakeHolder\"",
+                  "offset": 25
+                }
+              ],
+              "location": "RegistrationUIStep.user_provides_a_username(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1298857400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user provides email id as \"stakeholder@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"stakeholder@gmail.com\"",
+                  "offset": 26
+                }
+              ],
+              "location": "RegistrationUIStep.user_provides_email_id_as(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1263212900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enters the password as \"stakeholder[1].\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"stakeholder[1].\"",
+                  "offset": 28
+                }
+              ],
+              "location": "RegistrationUIStep.user_enters_the_password_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1168538600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user confirms the new password \"stakeholder[1].\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"stakeholder[1].\"",
+                  "offset": 31
+                }
+              ],
+              "location": "RegistrationUIStep.user_confirms_the_new_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 120747100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on register button and sees the success message as \"successfully registered\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"successfully registered\"",
+                  "offset": 63
+                }
+              ],
+              "location": "RegistrationUIStep.user_clicks_on_register_button_and_sees_the_success_message_as(String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@dumTest"
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@endToEnd"
+          },
+          {
+            "name": "@registerNewUserUI"
+          }
+        ]
+      },
+      {
+        "line": 42,
+        "name": "admin account activation",
+        "description": "",
+        "id": "register-new-applicants;admin-account-activation;all-admin-data;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3968451600,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user goes to login page",
+            "match": {
+              "location": "LoginStep.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 270247600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user provides username \"CWoburn\" and password \"Cw192837?\" along with role \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CWoburn\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Cw192837?\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"admin\"",
+                  "offset": 74
+                }
+              ],
+              "location": "LoginStep.user_provides_username_and_password_along_with_role(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 99001800,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user logs in",
+            "match": {
+              "location": "LoginStep.user_logs_in()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 375685200,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on the administration dropdown",
+            "match": {
+              "location": "UserManagementStep.user_clicks_on_the_administration_dropdown()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93132200,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user clicks on the userManagement button",
+            "match": {
+              "location": "UserManagementStep.user_clicks_on_the_userManagement_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22225671700,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user activates the current customer",
+            "match": {
+              "location": "UserManagementStep.user_activates_the_current_customer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 452867500,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user signs out",
+            "match": {
+              "location": "LoginStep.user_signs_out()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@endToEnd"
+          },
+          {
+            "name": "@adminActivation"
+          }
+        ]
+      },
+      {
+        "line": 56,
+        "name": "go to registration",
+        "description": "",
+        "id": "register-new-applicants;go-to-registration;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1001917300,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user goes to login page",
+            "match": {
+              "location": "LoginStep.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 274374200,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user provides username \"gino.wintheiser\" and password \"%B6B*q1!TH\" along with role \"employee\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"gino.wintheiser\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"%B6B*q1!TH\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"employee\"",
+                  "offset": 83
+                }
+              ],
+              "location": "LoginStep.user_provides_username_and_password_along_with_role(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 103798200,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user logs in",
+            "match": {
+              "location": "LoginStep.user_logs_in()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@endToEnd"
+          },
+          {
+            "name": "@loginEmployee"
+          }
+        ]
+      },
+      {
+        "line": 74,
+        "name": "All account info",
+        "description": "",
+        "id": "register-new-applicants;all-account-info;all-data;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 328349800,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "user navigates to my operations",
+            "match": {
+              "location": "Employee.user_navigates_to_my_operations()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 215822900,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "user clicks on manageAccount",
+            "match": {
+              "location": "Employee.user_clicks_on_manageAccount()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7149744400,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user creates a new account",
+            "match": {
+              "location": "Employee.user_creates_a_new_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 315184700,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides a description \"checking account for user mahir5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"checking account for user mahir5\"",
+                  "offset": 28
+                }
+              ],
+              "location": "ManageAccount.user_provides_a_description(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 110711900,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user provides their balance \"20000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"20000\"",
+                  "offset": 28
+                }
+              ],
+              "location": "ManageAccount.user_provides_their_balance(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 149409300,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "user provides an account type \"CHECKING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHECKING\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_provides_an_account_type(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 126994500,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "user provides the account status \"ACTIVE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACTIVE\"",
+                  "offset": 33
+                }
+              ],
+              "location": "ManageAccount.user_provides_the_account_status(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88243000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "user saves the account",
+            "match": {
+              "location": "ManageAccount.user_saves_the_account()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@endToEnd"
+          },
+          {
+            "name": "@CreateAccount"
+          }
+        ]
+      },
+      {
+        "line": 75,
+        "name": "All account info",
+        "description": "",
+        "id": "register-new-applicants;all-account-info;all-data;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 137193800,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "user navigates to my operations",
+            "match": {
+              "location": "Employee.user_navigates_to_my_operations()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 164478300,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "user clicks on manageAccount",
+            "match": {
+              "location": "Employee.user_clicks_on_manageAccount()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9988561900,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user creates a new account",
+            "match": {
+              "location": "Employee.user_creates_a_new_account()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 263599300,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides a description \"saving account for user mahir5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"saving account for user mahir5\"",
+                  "offset": 28
+                }
+              ],
+              "location": "ManageAccount.user_provides_a_description(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 118776900,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user provides their balance \"20000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"20000\"",
+                  "offset": 28
+                }
+              ],
+              "location": "ManageAccount.user_provides_their_balance(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 130952600,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "user provides an account type \"CHECKING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHECKING\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ManageAccount.user_provides_an_account_type(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110832200,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "user provides the account status \"ACTIVE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ACTIVE\"",
+                  "offset": 33
+                }
+              ],
+              "location": "ManageAccount.user_provides_the_account_status(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 91608400,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "user saves the account",
+            "match": {
+              "location": "ManageAccount.user_saves_the_account()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@endToEnd"
+          },
+          {
+            "name": "@CreateAccount"
+          }
+        ]
+      },
+      {
+        "line": 105,
+        "name": "Create customer info",
+        "description": "",
+        "id": "register-new-applicants;create-customer-info;all-data;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 133413400,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "user navigates to my operations",
+            "match": {
+              "location": "Employee.user_navigates_to_my_operations()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 172619100,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "user clicks on manageCustomer",
+            "match": {
+              "location": "Employee.user_clicks_on_manageCustomer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 292227700,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "user creates a customer",
+            "match": {
+              "location": "Employee.user_creates_a_customer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 653007000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "user types the ssn as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_ssn_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 121408000,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "user clicks on the searchbox",
+            "match": {
+              "location": "ManageCustomer.user_clicks_on_the_searchbox()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64200,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "user types the firstname as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_firstname_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20100,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user also types the lastname as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 32
+                }
+              ],
+              "location": "ManageCustomer.user_also_types_the_lastname_as(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 119624600,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user provides the middle initial as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "ManageCustomer.user_provides_the_middle_initial_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 359800,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user types the email id as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_email_id_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 499400,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user types the mobilePhoneNumber as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_mobilePhoneNumber_as(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 83100,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user types the actual phone number as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 38
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_actual_phone_number_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 569251200,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "user types the zipCode as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 26
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_zipCode_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67900,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "user the address as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "ManageCustomer.user_the_address_as(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 217615400,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "user types the city as \"Fairfax\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fairfax\"",
+                  "offset": 23
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_city_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61900,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "user types the same ssn as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_same_ssn_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 199850400,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "user selects a country as \"USA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USA\"",
+                  "offset": 26
+                }
+              ],
+              "location": "ManageCustomer.user_selects_a_country_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 210195100,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "user types the state name as \"Virginia\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Virginia\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ManageCustomer.user_types_the_state_name_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 315403400,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "user selects an account from dropdown as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 41
+                }
+              ],
+              "location": "ManageCustomer.user_selects_an_account_from_dropdown_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 174870000,
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "user clicks on save button",
+            "match": {
+              "location": "ManageCustomer.user_clicks_on_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 335230200,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "user signs out",
+            "match": {
+              "location": "LoginStep.user_signs_out()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@endToEnd"
+          },
+          {
+            "name": "@CustomerCreation"
           }
         ]
       }
     ],
-    "name": "Dummy Test",
+    "name": "Register new applicants",
     "description": "",
-    "id": "dummy-test",
+    "id": "register-new-applicants",
     "keyword": "Feature",
-    "uri": "src\\test\\resources\\features\\DummyTest.feature",
-    "tags": []
+    "uri": "src\\test\\resources\\features\\EndToEnd.feature",
+    "tags": [
+      {
+        "name": "@NewApplicants",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

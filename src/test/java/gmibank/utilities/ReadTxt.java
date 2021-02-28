@@ -4,6 +4,7 @@ package gmibank.utilities;
 
 
 import gmibank.pojos.Customer;
+import gmibank.pojos.User;
 
 
 import java.io.BufferedReader;
@@ -183,6 +184,85 @@ public class ReadTxt {
             e.printStackTrace();
         }
         return all;
+    }
+
+    public static List<User> returnAWholeUser(String filePath){
+        List<User>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+
+            int i = 0;
+            while (line != null) {
+                User customer = new User();
+
+                customer.setPassword(line.split(",")[0].trim());
+                customer.setUsername(line.split(",")[1].trim());
+                customer.setFirstName(line.split(",")[2].trim());
+                customer.setLastName(line.split(",")[3].trim());
+                customer.setSsn(line.split(",")[4].trim());
+                customer.setAddress(line.split(",")[5].trim());
+                customer.setEmail(line.split(",")[6].trim());
+                customer.setPhoneNumber(line.split(",")[6].trim());
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+
+
+                all.add(customer);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
+
+    public static List<String> returnAllCustomerCredentials(String filePath){
+        List<String >list = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+
+                String username =line.split(",")[1].trim();
+                String password = line.split(",")[0].trim();
+                list.add(password);
+                list.add(username);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static List<String> returnAllAccounts(String filePath){
+        List<String >list = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+
+            while (line != null) {
+
+
+                String accountDescription = line.split(",")[0].trim();
+                list.add(accountDescription);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
     }
 
 }
